@@ -1,0 +1,6 @@
+Main.class
+com\webscraper\Exchange.class
+com\webscraper\HttpArgsGET.class
+com\webscraper\utils\Utils.class
+com\webscraper\InteractiveBrokers.class
+com\webscraper\StockIdentifier.class

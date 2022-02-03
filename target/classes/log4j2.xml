@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration status="INFO">
+    <Properties>
+        <Property name="layout">%d [%t] %-5level %logger - %m%n</Property>
+    </Properties>
+  
+    <Appenders>
+  
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${layout}" />
+        </Console>     
+
+    </Appenders>
+    
+    <Loggers>
+
+        <Logger name="com.webscraper" level="INFO" additivity="FALSE" >
+            <AppenderRef ref="Console" />
+        </Logger>
+                
+        <Logger name="log4j.logger.httpclient.wire.header" level="OFF" >
+            <!--<AppenderRef ref="Console" />-->
+        </Logger>
+        
+        <Logger name="log4j.logger.httpclient.wire.content" level="OFF" > 
+            <!--<AppenderRef ref="Console" />-->
+        </Logger>
+        
+        <Logger name="log4j.logger.org.apache.http" level="OFF" >
+            <!--<AppenderRef ref="Console" />-->
+        </Logger>
+        
+        <Logger name="log4j.logger.org.apache.http.headers" level="OFF" >
+            <!--<AppenderRef ref="Console" />-->
+        </Logger>
+        
+        <Root level="INFO">
+            <AppenderRef ref="Console" />
+        </Root>    
+
+    </Loggers>
+</Configuration>
